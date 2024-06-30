@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #23232e;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .items {
+  background-color: black;
+  height: 70px;
+  width: 30%;
+  margin: 40px auto;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .navbar img{
+    height: 100px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left:500px ;
+  } */
+.navbar .items p {
+  margin: 0 15px;
+}
+
+.main {
+  margin: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card1,
+.card2,
+.card3 {
+  color: white;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card1 {
+  background-color: #fd9020;
+}
+
+.card2 {
+  background-color: #425e9c;
+}
+
+.card3 {
+  background-color: #719fb0;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.hero .herocard {
+  background-color: #bfb293;
+  height: 380px;
+  width: 750px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+  margin-right: 200px;
+  color: black;
+}
+
+.actioncard {
+  background-color: #4caf50;
+  height: 380px;
+  width: 250px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options p {
+  margin-bottom: 20px;
+}
+
+.options button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: #555;
+}
