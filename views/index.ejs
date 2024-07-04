@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coditency</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="./images/logo.png" alt="Coditency Logo" />
+        <a href="/" class="nav-link">Home</a>
+        <a href="/progress" class="nav-link">Progress</a>
+        <a href="/task" class="nav-link">Tasks</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/login" class="nav-link">Login/Logout</a>
+      </div>
+      <div class="cards">
+        <div class="card" id="card1">
+          <div class="card-content">
+            <h3>Streak</h3>
+          </div>
+        </div>
+        <div class="card" id="card2">
+          <div class="card-content">
+            <h3>Leetcode</h3>
+          </div>
+        </div>
+        <div class="card" id="card3">
+          <div class="card-content">
+            <h3>Codeforce</h3>
+          </div>
+        </div>
+      </div>
+      <div class="btn">
+        <form action="/add" method="POST">
+          <button type="submit" class="action-btn">Add Now</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
