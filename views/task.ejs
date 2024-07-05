@@ -16,7 +16,32 @@
         <a href="/about" class="nav-link">About</a>
         <a href="/login" class="nav-link">Login/Logout</a>
       </div>
-      THIS IS task PAGE
+      <div class="task-form">
+        <h2 class="form-title">Add New Task</h2>
+        <form action="/addtask" method="POST" class="form">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            class="form-input"
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="Description"
+            class="form-input"
+          />
+          <button type="submit" class="action-btn">Submit</button>
+        </form>
+      </div>
+      <div class="task-display">
+        <% tasks.forEach(task => { %>
+        <div class="task-card">
+          <h3><%= task.title %></h3>
+          <p><%= task.description %></p>
+        </div>
+        <% }); %>
+      </div>
     </div>
   </body>
 </html>

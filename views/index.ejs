@@ -29,14 +29,26 @@
         </div>
         <div class="card" id="card3">
           <div class="card-content">
-            <h3>Codeforce</h3>
+            <h3>Codeforces</h3>
           </div>
         </div>
       </div>
-      <div class="btn">
-        <form action="/add" method="POST">
-          <button type="submit" class="action-btn">Add Now</button>
-        </form>
+      <div class="addform">
+        <div class="btn">
+          <form action="/add" method="POST">
+            <input
+              type="number"
+              name="questions"
+              placeholder="Enter the number of solved questions"
+              id="inp1"
+            />
+            <select name="platform" id="inp1">
+              <option value="codeforces">Codeforces</option>
+              <option value="leetcode">LeetCode</option>
+            </select>
+            <button type="submit" class="action-btn">Add Now</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

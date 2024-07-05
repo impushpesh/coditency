@@ -1,6 +1,12 @@
 const express = require ('express');
 const app=express();
 const path= require('path')
+const mongoose=require('mongoose');
+mongoose.connect('mongodb://localhost:27017/coditency');
+
+// Importing models
+const addmodel= require('./models/user');
+const Task = require('./models/task');
 
 app.set('view engine', 'ejs')
 app.use(express.json());
@@ -11,24 +17,28 @@ app.get('/',(req,res)=>{
     res.render('index');
 })
 
-app.get('/about',(req,res)=>{
-    res.render('about');
+app.get('/task',async (req,res)=>{
+    const tasks = await Task.find({});
+    res.render('task', { tasks });
 })
 
-app.get('/login',(req,res)=>{
-    res.render('login');
+app.post('/add', async (req,res)=>{
+    let {questions, platform} =req.body;
+    let added= await addmodel.create({
+        questions: questions,
+        platform: platform
+    })
+    res.redirect('/')
 })
 
-app.get('/progress',(req,res)=>{
-    res.render('progress');
-})
-
-app.get('/register',(req,res)=>{
-    res.render('register');
-})
-
-app.get('/task',(req,res)=>{
-    res.render('task');
+//route for task
+app.post('/addtask', async (req,res)=>{
+    const { title, description } = req.body;
+    await Task.create({
+      title: title,
+      description: description
+    });
+    res.redirect('/task');
 })
 
 
